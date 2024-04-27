@@ -1,0 +1,98 @@
+<resources>
+    <string name="app_name">ЛабМед</string>
+    <string name="main_activity_description">Просто поговори со своими наставниками.</string>
+
+    <string name="login">Соединение</string>
+    <string name="chat_with_mentor">Поговорите с наставником</string>
+
+    <!-- NOTIFICATION SERVICE -->
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="notification_title">"Вы получили уведомление"</string>
+
+    <!-- MAIN ACTIVITY -->
+    <string name="error_not_connected">Вы должны войти в систему!</string>
+    <string name="error_authentication_canceled">Аутентификация отменена&#8230;</string>
+    <string name="error_no_internet">Нет подключения к интернету!</string>
+    <string name="error_unknown_error">Произошла неизвестная ошибка&#8230;</string>
+    <string name="connection_succeed">Аутентификация прошла успешно!</string>
+    <string name="button_login_text_logged">Показать профиль</string>
+    <string name="button_login_text_not_logged">Соединение</string>
+
+    <!-- LOGIN ACTIVITY -->
+    <string name="toolbar_title_login_activity">Ваш Профиль</string>
+    <string name="text_input_username">Имя пользователя</string>
+    <string name="text_view_email">Адрес электронной почты :</string>
+    <string name="button_update_account">Обновить имя пользователя</string>
+    <string name="button_delete_account">Удалить мою учетную запись</string>
+    <string name="button_sign_out_account">Отключение</string>
+    <string name="info_no_email_found">Даже если у вас есть адрес электронной почты</string>
+    <string name="screen1">Анализ</string>
+    <string name="screen2">Уведомления</string>
+    <string name="screen3">Мониторинг</string>
+    <string name="screen1desc">Экспресс сбор и получение проб
+    </string>
+    <string name="screen2desc">Вы быстро узнаете о результатах
+    </string>
+    <string name="screen3desc">Наши врачи всегда наблюдают за вашими показателями здоровья
+    </string>
+    <string name="info_no_username_found">Нет имени пользователя</string>
+    <string name="popup_message_confirmation_delete_account">Ты уверен(а), что хочешь удалить свою учетную запись?</string>
+    <string name="popup_message_choice_yes">Да !да!</string>
+    <string name="popup_message_choice_no">Нет</string>
+    <string name="check_box_is_mentor">Вы наставник?</string>
+
+    <!-- MENTOR_CHAT ACTIVITY -->
+    <string name="toolbar_title_mentor_chat_activity">Чаты в чатах</string>
+    <string name="text_input_title_mentor_chat_activity">Составьте свое сообщение</string>
+    <string name="button_title_mentor_chat_activity">ОТПРАВИТЬ</string>
+    <string name="text_view_mentor_chat_error">В этой ветке на данный момент нет сообщений&#8230;</string>
+    <string name="popup_title_permission_files_access">Это приложение нуждается в разрешении для работы.</string>
+    <string name="toast_title_no_image_chosen">Изображение не выбрано&#8230;</string>
+    <!-- Book api -->
+    <string name="thumbnail">Эскиз</string>
+    <string name="title">Заглавие</string>
+    <string name="category">Категория</string>
+    <string name="price">40$</string>
+    <string name="author">Автор</string>
+
+
+    <string name="search">ПОИСК</string>
+    <string name="hint">Введите свой запрос </string>
+    <string name="description_image_view">Шаблон для изображения</string>
+    <string name="description_divider">Делитель</string>
+    <string name="Failed_to_Load_data">Пожалуйста, проверьте ваше подключение к Интернету</string>
+    <string name="NO_RESULT">Совпадающих результатов нет</string>
+
+    <string-array name="fiche_type">
+        <item>Consultation</item>
+        <item>Hospitalisation</item>
+    </string-array>
+
+    <string-array name="specialite_spinner">
+        <item>Дантист</item>
+        <item>Главный врач</item>
+        <item>Лор</item>
+        <item>Офтальмолог</item>
+        <item>Педиатр</item>
+        <item>Радиология</item>
+        <item>Ревматолог</item>
+    </string-array>
+
+    <string-array name="blood_spinner">
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+        <item>O+</item>
+        <item>O-</item>
+    </string-array>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Привет, пустой фрагмент</string>
+    <!--<string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+        -->
+</resources>
+

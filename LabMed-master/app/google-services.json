@@ -1,0 +1,135 @@
+{
+  "project_info": {
+    "project_number": "700391629561",
+    "firebase_url": "https://labmed-fa6b9-default-rtdb.firebaseio.com",
+    "project_id": "labmed-fa6b9",
+    "storage_bucket": "labmed-fa6b9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:700391629561:android:fa029845ac49363d7b7828",
+        "android_client_info": {
+          "package_name": "com.ensias.healthcareapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "700391629561-3g4jqse0m1ee5ek4fqk0gmtodfcs9n38.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBj9b_a7mQtUXwPMRH0v_jwTyMKKL8Xzkw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "700391629561-3g4jqse0m1ee5ek4fqk0gmtodfcs9n38.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:700391629561:android:4996aceaa0d472ef7b7828",
+        "android_client_info": {
+          "package_name": "com.example.curzovaia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "700391629561-3g4jqse0m1ee5ek4fqk0gmtodfcs9n38.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBj9b_a7mQtUXwPMRH0v_jwTyMKKL8Xzkw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "700391629561-3g4jqse0m1ee5ek4fqk0gmtodfcs9n38.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:700391629561:android:e40480b9b71028067b7828",
+        "android_client_info": {
+          "package_name": "com.example.curzovaia3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "700391629561-lpscls53bp3hf67nmn6va4plj7isnua4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.curzovaia3",
+            "certificate_hash": "a39ad9e92ab11b39ab8549a5be61dd1281d0ba71"
+          }
+        },
+        {
+          "client_id": "700391629561-3g4jqse0m1ee5ek4fqk0gmtodfcs9n38.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBj9b_a7mQtUXwPMRH0v_jwTyMKKL8Xzkw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "700391629561-3g4jqse0m1ee5ek4fqk0gmtodfcs9n38.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:700391629561:android:c539f076fff505c47b7828",
+        "android_client_info": {
+          "package_name": "com.example.curzovaia510"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "700391629561-3g4jqse0m1ee5ek4fqk0gmtodfcs9n38.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBj9b_a7mQtUXwPMRH0v_jwTyMKKL8Xzkw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "700391629561-3g4jqse0m1ee5ek4fqk0gmtodfcs9n38.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,467 @@
+@startuml
+class com.ensias.healthcareapp.FicheInfo {
+~ TextView t1
+# void onCreate(Bundle)
+}
+
+
+class com.ensias.healthcareapp.ConfirmedAppointmensActivity {
+- FirebaseFirestore db
+- CollectionReference myDoctorsRef
+- ConfirmedAppointmentsAdapter adapter
+# void onCreate(Bundle)
++ void setUpRecyclerView()
+# void onStart()
+# void onStop()
+}
+
+
+class com.ensias.healthcareapp.SignInClient {
+- {static} int RC_SIGN_IN
+- FirebaseAuth mAuth
+- Button signUpBtn
+- EditText emailText
+- EditText passwordText
+- Button loginBtn
+- Button creatBtn
+- EditText secondPass
+- EditText confirme
+~ SignInButton signInButton
+~ FirebaseFirestore db
+- CollectionReference UsersRef
+~ GoogleSignInClient mGoogleSignInClient
+# void onCreate(Bundle)
++ void onStart()
++ void onActivityResult(int,int,Intent)
+- void firebaseAuthWithGoogle(GoogleSignInAccount)
+- void updateUI(FirebaseUser)
+}
+
+
+class com.ensias.healthcareapp.SearchPatActivity {
+- FirebaseFirestore db
+- CollectionReference doctorRef
+- DoctorAdapterFiltred adapter
+# void onCreate(Bundle)
+- void setUpRecyclerView()
+# void onStart()
+# void onStop()
++ boolean onCreateOptionsMenu(Menu)
++ boolean onOptionsItemSelected(MenuItem)
+- void configureToolbar()
+}
+
+
+class com.ensias.healthcareapp.ViewPagerAdapter {
+~ Context context
+~ int[] sliderAllImages
+~ int[] sliderAllTitle
+~ int[] sliderAllDesc
++ int getCount()
++ boolean isViewFromObject(View,Object)
++ Object instantiateItem(ViewGroup,int)
++ void destroyItem(ViewGroup,int,Object)
+}
+
+
+class com.ensias.healthcareapp.PatientInfoActivity {
+~ EditText heightBtn
+~ EditText weightBtn
+~ Spinner bloodtypeSpinner
+~ Button updateBtn
+# void onCreate(Bundle)
+}
+
+
+class com.ensias.healthcareapp.NavigationActivity {
+~ ViewPager slideViewPager
+~ LinearLayout dotIndicator
+~ Button backButton
+~ TextView[] dots
+~ ViewPagerAdapter viewPagerAdapter
+~ ViewPager.OnPageChangeListener viewPagerListener
+# void onCreate(Bundle)
++ void setDotIndicator(int)
+- int getItem(int)
+}
+
+
+class com.ensias.healthcareapp.DoctorAppointementActivity {
+- FirebaseFirestore db
+- CollectionReference doctorAppointementRef
+- DoctorAppointementAdapter adapter
+# void onCreate(Bundle)
++ void setUpRecyclerView()
+# void onStart()
+# void onStop()
+}
+
+
+class com.ensias.healthcareapp.ConsultationFragmentPage {
+- FirebaseFirestore db
+- CollectionReference FicheRef
+- ConsultationAdapter adapter
+~ View result
++ {static} ConsultationFragmentPage newInstance()
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
+- void setUpRecyclerView()
++ void onStart()
++ void onStop()
+}
+
+
+class com.ensias.healthcareapp.MyPatientsActivity {
+- FirebaseFirestore db
+- CollectionReference myPatientsRef
+- MyPatientsAdapter adapter
+# void onCreate(Bundle)
++ void setUpRecyclerView()
+# void onStart()
+# void onStop()
+}
+
+
+class com.ensias.healthcareapp.AppointementActivity {
+- LinearLayout lis
+~ {static} FirebaseFirestore db
+# void onCreate(Bundle)
+}
+
+
+class com.ensias.healthcareapp.ProfilePatientActivity {
+- MaterialTextView doctorName
+- MaterialTextView doctorSpe
+- MaterialTextView doctorPhone
+- MaterialTextView doctorEmail
+- MaterialTextView doctorAddress
+- MaterialTextView doctorAbout
+- ImageView doctorImage
+~ StorageReference pathReference
+~ String doctorID
+~ FirebaseFirestore db
+~ DocumentReference docRef
+# void onCreate(Bundle)
++ boolean onCreateOptionsMenu(Menu)
++ boolean onOptionsItemSelected(MenuItem)
+- void startHomeActivity()
+- void startEditActivity()
+}
+
+
+class com.ensias.healthcareapp.DoctorHomeActivity {
+~ {static} String doc
+~ Button SignOutBtn2
+~ Button BtnRequst
+~ Button listPatients
+~ Button appointementBtn
+~ Unbinder unbinder
+~ void profileBtnClick()
+~ void myCalendarOnclick()
+# void onCreate(Bundle)
++ void showDatePickerDialog(Context)
++ void onDateSet(DatePicker,int,int,int)
+- void openPage(Context,String,String)
+}
+
+
+class com.ensias.healthcareapp.PatientRequestPage {
+- FirebaseFirestore db
+- CollectionReference addRef
+- PatRequestAdapter adapter
+# void onCreate(Bundle)
+- void setUpRecyclerView()
+# void onStart()
+# void onStop()
+}
+
+
+class com.ensias.healthcareapp.FicheActivity {
+- EditText maladie
+- EditText description
+- EditText traitement
+- Spinner ficheType
+# void onCreate(Bundle)
++ void onItemSelected(AdapterView<?>,View,int,long)
++ void onNothingSelected(AdapterView<?>)
+- void addFiche()
+}
+
+
+class com.ensias.healthcareapp.PatientAppointementsActivity {
+- FirebaseFirestore db
+- CollectionReference myDoctorsRef
+- PatientAppointmentsAdapter adapter
+# void onCreate(Bundle)
++ void setUpRecyclerView()
+# void onStart()
+# void onStop()
+}
+
+
+class com.ensias.healthcareapp.MainZastavka {
+- FirebaseAuth mAuth
+# void onCreate(Bundle)
+}
+
+
+class com.ensias.healthcareapp.GetStartedActivity {
+~ Button startButton
+# void onCreate(Bundle)
+}
+
+
+class com.ensias.healthcareapp.HomeActivity {
+~ Button SignOutBtn
+~ Button searchPatBtn
+~ Button myDoctors
+~ Button BtnRequst
+~ Button profile
+~ Button appointment
+# void onCreate(Bundle)
+}
+
+
+class com.ensias.healthcareapp.MyDoctorsAvtivity {
+- FirebaseFirestore db
+- CollectionReference myDoctorsRef
+- MyDoctorsAdapter adapter
+# void onCreate(Bundle)
++ void setUpRecyclerView()
+# void onStart()
+# void onStop()
+}
+
+
+class com.ensias.healthcareapp.FirstSigninActivity {
+- {static} String TAG
+- EditText fullName
+- EditText birthday
+- EditText teL
+- Button btn
+# void onCreate(Bundle)
+}
+
+
+class com.ensias.healthcareapp.ProfileDoctorActivity {
+- MaterialTextView doctorName
+- MaterialTextView doctorSpe
+- MaterialTextView doctorPhone
+- MaterialTextView doctorEmail
+- MaterialTextView doctorAddress
+- MaterialTextView doctorAbout
+- ImageView doctorImage
+~ StorageReference pathReference
+~ String doctorID
+~ FirebaseFirestore db
+~ DocumentReference docRef
+# void onCreate(Bundle)
++ boolean onCreateOptionsMenu(Menu)
++ boolean onOptionsItemSelected(MenuItem)
+- void startHomeActivity()
+- void startEditActivity()
+}
+
+
+class com.ensias.healthcareapp.TestActivity {
+~ StepView stepView
+~ NonSwipeViewPager viewPager
+~ Button btn_previous_step
+~ Button btn_next_step
+~ Unbinder unbinder
+~ LocalBroadcastManager localBroadcastManager
+- BroadcastReceiver buttonNextReceiver
+# void onCreate(Bundle)
+- void confirmeBooking()
+# void onDestroy()
+- void loadTimeSlotOfDoctor(String)
+- void setColorButton()
+- void setupStepView()
+}
+
+
+class com.ensias.healthcareapp.EditProfilePatientActivity {
+- {static} int PICK_IMAGE_REQUEST
+- {static} String TAG
+- ImageView profileImage
+- ImageButton selectImage
+- Button updateProfile
+- TextInputEditText doctorName
+- TextInputEditText doctorEmail
+- TextInputEditText doctorPhone
+- TextInputEditText doctorAddress
+~ String currentDoctorUID
+~ String doctorID
+- Uri uriImage
+- StorageReference pStorageRef
+- DatabaseReference pDatabaseRef
+- FirebaseFirestore doctorRef
+- StorageReference pathReference
+~ FirebaseStorage storage
+- StorageReference storageRef
+- DatabaseReference currentUserImg
++ void onCreate(Bundle)
+- void updateDoctorInfos(String,String,String)
+- void openFileChooser()
+# void onActivityResult(int,int,Intent)
+- String getFileExtension(Uri)
+- void uploadProfileImage()
+}
+
+
+class com.ensias.healthcareapp.DoctorAdapterFiltred {
++ {static} boolean specialiteSearch
+~ {static} String doc
+~ {static} FirebaseFirestore db
+~ {static} CollectionReference addRequest
+- List<Doctor> mTubeList
+- List<Doctor> mTubeListFiltered
+~ StorageReference pathReference
++ DoctoreHolder2 onCreateViewHolder(ViewGroup,int)
++ void onBindViewHolder(DoctoreHolder2,int)
++ int getItemCount()
++ Filter getFilter()
+- void openPage(Context)
+}
+
+
+class com.ensias.healthcareapp.DoctorAdapterFiltred$DoctoreHolder2 {
+~ Button appointemenBtn
+~ TextView title
+~ TextView specialite
+~ ImageView image
+~ Button addDoc
+~ Button load
+}
+
+class com.ensias.healthcareapp.EditProfileDoctorActivity {
+- {static} int PICK_IMAGE_REQUEST
+- {static} String TAG
+- ImageView profileImage
+- ImageButton selectImage
+- Button updateProfile
+- TextInputEditText doctorName
+- TextInputEditText doctorEmail
+- TextInputEditText doctorPhone
+- TextInputEditText doctorAddress
+~ String currentDoctorUID
+~ String doctorID
+- Uri uriImage
+- StorageReference pStorageRef
+- DatabaseReference pDatabaseRef
+- FirebaseFirestore doctorRef
+- StorageReference pathReference
+~ FirebaseStorage storage
+- StorageReference storageRef
+- DatabaseReference currentUserImg
++ void onCreate(Bundle)
+- void updateDoctorInfos(String,String,String)
+- void openFileChooser()
+# void onActivityResult(int,int,Intent)
+- String getFileExtension(Uri)
+- void uploadProfileImage()
+}
+
+
+class com.ensias.healthcareapp.ChatActivity {
+- FirebaseAuth mAuth
+- Bundle extras
+- CollectionReference MessageRef1
+- CollectionReference MessageRef2
+- MessageAdapter adapter
+- TextInputEditText envoyer
+- Button btnEnvoyer
+# void onCreate(Bundle)
+- void setUpRecyclerView()
+# void onStart()
+# void onStop()
+}
+
+
+class com.ensias.healthcareapp.DossierMedical {
+- {static} String TAG
+- FloatingActionButton createNewFicheButton
+- String patient_email
+- Button infobtn
+- String patient_name
+- String patient_phone
+~ String patientID
+~ FirebaseFirestore db
+~ DocumentReference patRef
+~ StorageReference pathReference
+# void onCreate(Bundle)
+- void getIncomingIntent()
+- void setPatientInfos(String,String,String)
+- void configureViewPager()
+- void openPatientFiche()
+- void openPatientInfo()
+}
+
+
+class com.ensias.healthcareapp.Hospitalisation {
+- FirebaseFirestore db
+- CollectionReference FicheRef
+- HospitalisationAdapter adapter
+~ View result
++ {static} Hospitalisation newInstance()
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
+- void setUpRecyclerView()
++ void onStart()
++ void onStop()
+}
+
+
+class com.ensias.healthcareapp.MyCalendarDoctorActivity {
+~ DocumentReference doctorDoc
+~ ITimeSlotLoadListener iTimeSlotLoadListener
+~ android.app.AlertDialog alertDialog
+~ RecyclerView recycler_time_slot
+~ HorizontalCalendarView calendarView
+- SimpleDateFormat simpleDateFormat
+# void onCreate(Bundle)
+- void init()
+- void loadAvailabelTimeSlotOfDoctor(String,String)
++ void onTimeSlotLoadSuccess(List<TimeSlot>)
++ void onTimeSlotLoadFailed(String)
++ void onTimeSlotLoadEmpty()
+}
+
+
+
+
+androidx.appcompat.app.AppCompatActivity <|-- com.ensias.healthcareapp.FicheInfo
+androidx.appcompat.app.AppCompatActivity <|-- com.ensias.healthcareapp.ConfirmedAppointmensActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.ensias.healthcareapp.SignInClient
+androidx.appcompat.app.AppCompatActivity <|-- com.ensias.healthcareapp.SearchPatActivity
+androidx.viewpager.widget.PagerAdapter <|-- com.ensias.healthcareapp.ViewPagerAdapter
+androidx.appcompat.app.AppCompatActivity <|-- com.ensias.healthcareapp.PatientInfoActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.ensias.healthcareapp.NavigationActivity
+android.app.Activity <|-- com.ensias.healthcareapp.DoctorAppointementActivity
+androidx.fragment.app.Fragment <|-- com.ensias.healthcareapp.ConsultationFragmentPage
+androidx.appcompat.app.AppCompatActivity <|-- com.ensias.healthcareapp.MyPatientsActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.ensias.healthcareapp.AppointementActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.ensias.healthcareapp.ProfilePatientActivity
+com.ensias.healthcareapp.OnDateSetListener <|.. com.ensias.healthcareapp.DoctorHomeActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.ensias.healthcareapp.DoctorHomeActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.ensias.healthcareapp.PatientRequestPage
+com.ensias.healthcareapp.OnItemSelectedListener <|.. com.ensias.healthcareapp.FicheActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.ensias.healthcareapp.FicheActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.ensias.healthcareapp.PatientAppointementsActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.ensias.healthcareapp.MainZastavka
+androidx.appcompat.app.AppCompatActivity <|-- com.ensias.healthcareapp.GetStartedActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.ensias.healthcareapp.HomeActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.ensias.healthcareapp.MyDoctorsAvtivity
+androidx.appcompat.app.AppCompatActivity <|-- com.ensias.healthcareapp.FirstSigninActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.ensias.healthcareapp.ProfileDoctorActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.ensias.healthcareapp.TestActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.ensias.healthcareapp.EditProfilePatientActivity
+android.widget.Filterable <|.. com.ensias.healthcareapp.DoctorAdapterFiltred
+com.ensias.healthcareapp.Adapter <|-- com.ensias.healthcareapp.DoctorAdapterFiltred
+com.ensias.healthcareapp.DoctorAdapterFiltred +.. com.ensias.healthcareapp.DoctorAdapterFiltred$DoctoreHolder2
+com.ensias.healthcareapp.ViewHolder <|-- com.ensias.healthcareapp.DoctorAdapterFiltred$DoctoreHolder2
+androidx.appcompat.app.AppCompatActivity <|-- com.ensias.healthcareapp.EditProfileDoctorActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.ensias.healthcareapp.ChatActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.ensias.healthcareapp.DossierMedical
+androidx.fragment.app.Fragment <|-- com.ensias.healthcareapp.Hospitalisation
+com.ensias.healthcareapp.Interface.ITimeSlotLoadListener <|.. com.ensias.healthcareapp.MyCalendarDoctorActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.ensias.healthcareapp.MyCalendarDoctorActivity
+@enduml
